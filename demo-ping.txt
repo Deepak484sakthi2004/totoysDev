@@ -1,4 +1,4 @@
-$ curl -X POST http://localhost:5000/qa -H "Content-Type: application/json" -d '{
+curl -X POST http://localhost:5000/qa -H "Content-Type: application/json" -d '{
   "db": "class10",
   "query": "what is diffusion",
   "student_id": "9QS8YPx9GuhWNxwrVs5Q2kc1e4K3"
