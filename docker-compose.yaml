@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: flask_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - OPEN_API_KEY=${open_api_key}
+    volumes:
+      - .:/app
+    networks:
+      - backend_network
+    env_file: 
+      - .env
+
+networks:
+  backend_network:
+    driver: bridge
